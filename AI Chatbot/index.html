@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+ <!-- ✅ Add this line to load emoji picker script -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/style.css" />
+
+</head>
+<body>
+<button id="chatbot-toggler">
+   <span class="material-symbols-rounded">mode_comment</span>
+   <span class="material-symbols-rounded">close</span>
+</button>
+
+  <div class="chatbot-popup">
+    <div class="chat-header">
+      <div class="header-info">
+        <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+          <path d="..."></path>
+        </svg>
+        <h2 class="logo-text">Chatbot</h2>
+      </div>
+      <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+    </div>
+
+    <div class="chat-body">
+      <div class="message bot-message">
+        <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+          <path d="..."></path>
+        </svg>
+        <div class="message-text">Hey there 👋<br> How can I help you today?</div>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <form action="#" class="chat-form">
+        <textarea placeholder="Message..." class="message-input" required></textarea>
+        <div class="chat-controls">
+          <div id="emoji-picker-container"></div>
+          <button type="button" id="emoji-picker" class="material-symbols-rounded">sentiment_satisfied</button>
+          <div class="file-upload-wrapper">
+            <input type="file" accept="images/*" id="file-input" hidden />
+            <img src="#">
+            <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+            <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+          </div>
+          <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Linking emoji Mart script from emoji picker -->
+  <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
